@@ -24,6 +24,27 @@ SetWorkingDir %A_ScriptDir%
 -f bestvideo*+bestaudio/best
 --merge-output-format mkv
 
+
+# yt-dlp (youtube-dl) with args
+--proxy http://127.0.0.1:7890 #配置代理
+--external-downloader aria2c #加入外置下载器，如aria2
+--external-downloader-args "-x 16 -k 1M" #给外置下载器的下载参数
+
+#输出文件名格式
+-o "%(uploader)s (%(uploader_id)s)/%(upload_date)s - %(title)s %(id)s.%(ext)s"
+
+#输出格式例子
+-o "%(upload_date)s - %(title)s %(id)s.%(ext)s"
+
+-f bestvideo*+bestaudio/best #获取最佳视频及音频
+--merge-output-format mkv #输出mkv
+
+--add-metadata #加入视频元信息
+--write-description #写入视频介绍
+--write-thumbnail #写入视频封面图
+
+--cookies-from-browser #调用浏览器cookie
+
 */
 
 
