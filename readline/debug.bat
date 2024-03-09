@@ -1,0 +1,1 @@
+D:\tools\AutoHotkey_2.0.11\AutoHotkey32.exe main.ahk
