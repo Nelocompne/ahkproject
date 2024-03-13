@@ -1,8 +1,22 @@
-Loop read, "adds\list.txt"
+
+MODSDIR := A_ScriptDir "\addr\"
+SAVEDIR := A_ScriptDir "\adds\" 
+INIFILE := SAVEDIR "list.txt"
+
+Loop read, INIFILE
 {
     Loop parse, A_LoopReadLine, "`n", "`r"
     {
-        objs := Format("addr\" , A_LoopField)
-        FileMove objs, "adds"
+        objs := MODSDIR A_LoopField
+        FileMove objs, SAVEDIR
     }
 }
+
+Loop read, INIFILE
+    {
+        Loop parse, A_LoopReadLine, "`n", "`r"
+        {
+            objs := SAVEDIR A_LoopField
+            FileMove objs, MODSDIR
+        }
+    }
