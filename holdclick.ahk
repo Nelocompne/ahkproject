@@ -1,3 +1,5 @@
+; AHK v1
+
 #NoEnv
 SendMode Input
 

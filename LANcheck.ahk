@@ -1,3 +1,4 @@
+; AHK v1
 ScanSubnet(addresses:="") {	;pings IP ranges & returns active IP's
 	BL := A_BatchLines
 	SetBatchLines, -1

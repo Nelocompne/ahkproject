@@ -1,3 +1,4 @@
+; Autohotkey V2 Script
 
 ; 通过变量控制的目录位置，包括写法
 MODSDIR := A_ScriptDir "\addr\"
@@ -6,7 +7,7 @@ INIFILE := SAVEDIR "list.txt"
 
 
 ; 读取文件，每行一个，每行一整个读取
-; 从mods文件移动到本地文件，读取本地目录配置
+; 从mods文件移动到本地文件
 Loop read, INIFILE
 {
     Loop parse, A_LoopReadLine, "`n", "`r"
@@ -16,7 +17,7 @@ Loop read, INIFILE
     }
 }
 
-; 从本地文件移动到mods文件，读取本地目录配置
+; 从本地文件移动到mods文件
 Loop read, INIFILE
 {
     Loop parse, A_LoopReadLine, "`n", "`r"
@@ -36,3 +37,26 @@ Loop read, INIFILE
         FileMove objs, MODSDIR
     }
 }
+
+
+
+INIFILE := "list.txt"
+
+Loop read, INIFILE
+    {
+        Loop parse, A_LoopReadLine, "`n", "`r"
+        {
+            word_array := StrSplit(A_LoopField, ",")
+            if (word_array[1] = "modsdir" ) {
+                MODSDIR := word_array[2]
+                MsgBox "mods地址为: " MODSDIR
+            }
+            if (word_array[1] = "savedir") {
+                SAVEDIR := word_array[2]
+                MsgBox "本地目录地址为: " SAVEDIR
+            } else {
+                objs := word_array[2]
+                MsgBox MODSDIR "\" objs
+            }
+        }
+    }

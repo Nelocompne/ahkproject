@@ -1,3 +1,4 @@
+; AHK v1
 #NoEnv
 #SingleInstance, Force
 SendMode, Input
