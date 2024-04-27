@@ -1,4 +1,4 @@
-; Autohotkey V2 Script
+#Requires AutoHotkey v2.0
 
 ; 通过变量控制的目录位置，包括写法
 MODSDIR := A_ScriptDir "\addr\"

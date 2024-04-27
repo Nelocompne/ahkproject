@@ -1,4 +1,4 @@
-﻿; AHK v1
+﻿#Requires AutoHotkey v1.0
 RUNBIN := A_Args[1]
 FileRead, FXSDKDIR, without_javafx.ini
 

@@ -1,4 +1,4 @@
-; AHK v2
+#Requires AutoHotkey v2.0
 
 ;for %x in (powershell.exe) do @echo %~$PATH:x
 

@@ -1,4 +1,4 @@
-; AHK v1
+#Requires AutoHotkey v1.0
 
 #NoEnv
 SendMode Input

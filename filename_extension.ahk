@@ -1,4 +1,4 @@
-; AHK v1
+#Requires AutoHotkey v1.0
 ; 文件名后缀切换，win7/10测试通过
 
 RegRead,Value,HKEY_CURRENT_USER,Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\,HideFileExt

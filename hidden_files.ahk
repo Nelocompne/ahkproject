@@ -1,4 +1,4 @@
-; AHK v1
+#Requires AutoHotkey v1.0
 ; 隐藏文件切换，win10测试通过
 
 RegRead,value,HKEY_CURRENT_USER,Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\, Hidden

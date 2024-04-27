@@ -1,4 +1,4 @@
-; AHK v2
+#Requires AutoHotkey v2.0
 ; 快捷方式小箭头去除、恢复，测试win7/10通过。
 
 full_command_line := DllCall("GetCommandLine", "str")
