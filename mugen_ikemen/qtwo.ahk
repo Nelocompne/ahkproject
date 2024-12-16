@@ -3,13 +3,14 @@ SetWorkingDir A_InitialWorkingDir
 
 CHAR := '"' A_Args[1] '"'
 PLAYA := " -p1.ai 1 -p1 " CHAR
-PLAYB := " -p2.ai 1 -p2 kfmZ"
+PLAYB := " -p2.ai 1 -p2 kfm"
 ;PLAYA := " -p1 " CHAR
 ;PLAYB := " -p2 kfmZ"
 ikemenARGG := ' -time 100'
 
 if FileExist("Ikemen_GO.exe"){
     BIN := "Ikemen_GO.exe"
+    PLAYB := " -p2.ai 1 -p2 kfmZ"
 }
 else if FileExist("mugen.exe"){
     BIN := 'mugen.exe'
